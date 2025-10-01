@@ -1,0 +1,19 @@
+name: Sync Go to GitLab
+
+on:
+  push:
+    paths:
+      - 'go/**'
+      - '.github/workflows/sync-go.yml'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Push subtree to GitLab
+        run: |
+          git config user.name "github-bot"
+          git config user.email "shapkin.alexandr.sergeevich@gmail.com"
+          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.alexandrshapkin.ru:8929/AlexandrShapkin/go-multistack-lab.git
+          git subtree push --prefix=go gitlab main
