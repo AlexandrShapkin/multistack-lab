@@ -15,5 +15,5 @@ jobs:
         run: |
           git config user.name "github-bot"
           git config user.email "shapkin.alexandr.sergeevich@gmail.com"
-          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.alexandrshapkin.ru:8929/AlexandrShapkin/go-multistack-lab.git
+          git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.alexandrshapkin.ru/AlexandrShapkin/go-multistack-lab.git
           git subtree push --prefix=go gitlab main
