@@ -16,17 +16,18 @@
 ```
 multistack-lab/
 ├── .github/workflows/ # GitHub Actions для синхронизации
-│ ├── sync-go.yml
-│ └── sync-python.yml
+│   ├── sync-go.yml
+│   └── sync-python.yml
 ├── go/ # Go-проект
-│ ├── main.go
-│ ├── main_test.go
-│ ├── go.mod
-│ └── .gitlab-ci.yml
-└── python/ # Python-проект
-├── main.py
-├── test_main.py
-└── .gitlab-ci.yml
+│   ├── main.go
+│   ├── main_test.go
+│   ├── go.mod
+│   └── .gitlab-ci.yml
+├── python/ # Python-проект
+│   ├── main.py
+│   ├── test_main.py
+│   └── .gitlab-ci.yml
+└── README.md
 ```
 
 ---
