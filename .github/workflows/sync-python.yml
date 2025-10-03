@@ -16,4 +16,4 @@ jobs:
           git config user.name "github-bot"
           git config user.email "shapkin.alexandr.sergeevich@gmail.com"
           git remote add gitlab https://oauth2:${{ secrets.GITLAB_TOKEN }}@gitlab.alexandrshapkin.ru/AlexandrShapkin/python-multistack-lab.git
-          git subtree push --prefix=python gitlab main
+          git push gitlab `git subtree split --prefix=python main`:main --force
